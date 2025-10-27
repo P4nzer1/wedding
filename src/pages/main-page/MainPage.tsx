@@ -1,9 +1,13 @@
-import react from 'react';
+import React from 'react';
+import { Typography } from '@mui/material';
+import { commonStyles } from '@styles/commonStyles';
 
 export default function MainPage() {
     return (
-        <main>
-            <h1>Hello everyone!</h1>
+        <main style={commonStyles.flexCenter}>
+            <Typography variant='h1'>Default</Typography>
+            <Typography variant='h2' color='text.primary'>Text Primary</Typography>
+            <Typography variant='h3' color='text.secondary'>Text Secondary</Typography>
         </main>
     )
 }
