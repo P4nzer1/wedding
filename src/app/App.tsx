@@ -1,4 +1,3 @@
-import react from 'react';
 import MainPage from '@pages/main-page/MainPage';
 
 export default function App() {
