@@ -10,7 +10,6 @@
           "@app/*": ["./src/app/*"],
           "@widgets/*": ["./src/widgets/*"],
           "@shared/*": ["./src/shared/*"],
-<<<<<<< HEAD
           "@pages/*": ["./src/pages/*"],
           "@assets/*": ["./src/assets/*"]
         }
@@ -19,10 +18,4 @@
       "src/**/*",
       "vite.config.ts"
     ]
-=======
-          "@assets/*": ["./src/assets/*"]
-        }
-    },
-    "include": ["src/**/*"]
->>>>>>> main
 }
