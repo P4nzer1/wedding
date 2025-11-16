@@ -1,6 +1,6 @@
-import react from 'react';
+import React from 'react';
 
-export default function MainPage() {
+export const MainPage = () => {
     return (
         <main>
             <h1>Hello everyone!</h1>
