@@ -10,8 +10,12 @@
           "@app/*": ["./src/app/*"],
           "@widgets/*": ["./src/widgets/*"],
           "@shared/*": ["./src/shared/*"],
+          "@pages/*": ["./src/pages/*"],
           "@assets/*": ["./src/assets/*"]
         }
     },
-    "include": ["src/**/*"]
+    "include": [
+      "src/**/*",
+      "vite.config.ts"
+    ]
 }

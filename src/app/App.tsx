@@ -1,9 +1,9 @@
-import react from 'react';
+import { MainPage } from '@/pages';
 
 export default function App() {
     return (
         <div>
-            <b>Zalupa</b>
+            <MainPage />
         </div>
     )
 }
