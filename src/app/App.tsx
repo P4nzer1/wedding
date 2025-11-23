@@ -1,9 +1,12 @@
+import { withMui } from '@/mui';
 import { MainPage } from '@/pages';
 
-export default function App() {
+const App = () => {
     return (
         <div>
             <MainPage />
         </div>
-    )
-}
+    );
+};
+
+export default withMui(App);
