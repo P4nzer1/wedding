@@ -1,56 +1,28 @@
-import { CSSProperties } from 'react';
 import '@mui/material';
 
+import { 
+    CustomPalette, 
+    CustomPaletteOptions,
+    CustomTypographyVariants,
+    CustomTypographyVariantsOptions,
+    ButtonVariant
+} from '@shared/ui/styles/types';
+
 declare module '@mui/material/styles' { 
-    interface ColorBasePalette {
-        white: string;
-        wine: string;
-        strokeBase: string;
-        strokeSecond: string;
-        bg: string;
-    }
-
-    interface ColorButtonWinePalette {
-        base: string;
-        hover: string;
-        disabled: string;
-    }
-
-    interface ColorTextPalette {
-        wineBase: string;
-        ivoryBase: string;
-        ivorySecond: string;
-    }
-
-    interface Palette {
-        colorBase: ColorBasePalette;
-        colorButtonWine: ColorButtonWinePalette;
-        colorText: ColorTextPalette;
-    }
-
-    interface PaletteOptions {
-        colorBase?: Partial<ColorBasePalette> | ColorBasePalette;
-        colorButtonWine?: Partial<ColorButtonWinePalette> | ColorButtonWinePalette;
-        colorText?: Partial<ColorTextPalette> | ColorTextPalette;
-    }
-
-    interface TypographyVariants { 
-        button: CSSProperties;
-    }
-
-    interface TypographyVariantsOptions { 
-        button?: CSSProperties;
-    }
+    interface Palette extends CustomPalette {}
+    interface PaletteOptions extends CustomPaletteOptions {}
+    interface TypographyVariants extends CustomTypographyVariants {}
+    interface TypographyVariantsOptions extends CustomTypographyVariantsOptions {}
 }
 
-declare module '@mui/material/Button' {
-    interface ButtonPropsVariantOverrides {
-        wine: true;
-    }
+declare module '@mui/material/Button' { 
+    interface ButtonPropsVariantOverrides extends Record<ButtonVariant, true> {}
 }
 
-declare module 'mui/material/Typography' {
+declare module '@mui/material/Typography' {
     interface TypographyPropsVariantOverrides {
         button: true;
+        p1: true;
+        p2: true;
     }
 }

@@ -1,18 +1,22 @@
 export const colors = {
     colorBase: {
         light: {
-            white: '#FFFFFF',
-            wine: '#7E0B1A',
-            strokeBase: '#918474',
-            strokeSecond: '#E1D5C7',
-            bg: '#FAF3E1',
+            colorBeige: '#DECDBC',
+            colorChocolate: '#48342C',
+            burgundy: '#5B2727 ',
+            cream: '#F6ECD9',
+            marsala: '#AD746D',
+            bgBase: '#DECDBC',
+            bgSecond: '#5B2727',
         },
         dark: {
-            white: '#FFFFFF',
-            wine: '#7E0B1A',
-            strokeBase: '#918474',
-            strokeSecond: '#E1D5C7',
-            bg: '#FAF3E1',
+            beige: '#000',
+            burgundy: '#000 ',
+            chocolate: '#000',
+            cream: '#000',
+            marsala: '#000',
+            bgBase: '#000',
+            bgSecond: '#000',
         },
     },
     colorButtonWine: {
@@ -22,9 +26,9 @@ export const colors = {
             disabled: '#C9B99B',
         },
         dark: {
-            base: '#7E0B1A',
-            hover: '#B50020',
-            disabled: '#C9B99B',
+            base: '#000',
+            hover: '#fff',
+            disabled: '#000',
         },
     },
     colorText: {
@@ -34,9 +38,9 @@ export const colors = {
             ivorySecond: '#E6D8CB',
         },
         dark: {
-            wineBase: '#7E0B1A',
-            ivoryBase: '#FAF3E1',
-            ivorySecond: '#E6D8CB',
+            wineBase: '#000',
+            ivoryBase: '#000',
+            ivorySecond: '#000',
         },
     },
 };

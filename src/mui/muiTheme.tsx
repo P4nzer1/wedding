@@ -1,12 +1,13 @@
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import { PaletteMode, ThemeProvider, CssBaseline, createTheme } from '@mui/material';
 import { lightTheme, darkTheme, components, typography } from '@shared/ui/styles';
-
-const DEFAULT_THEME_MODE: PaletteMode = 'light';
+import { ThemeModeEnum, getPreferredTheme } from '@features/settings/store';
 
 export const withMui = (component: () => ReactNode) => {
     return function WithMuiComponent() {
-        const themePalette = DEFAULT_THEME_MODE;
+        const [mode, setMode] = useState<ThemeModeEnum>(ThemeModeEnum.Auto);
+
+        const themePalette = (mode === ThemeModeEnum.Auto ? getPreferredTheme() : mode) as PaletteMode;
 
         const theme = createTheme({
             palette: {

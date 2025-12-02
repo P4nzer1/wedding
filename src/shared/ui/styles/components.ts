@@ -29,4 +29,48 @@ export const components: Components<Theme> = {
             },
         ],
     },
+    MuiTypography: {
+        defaultProps: {
+            variantMapping: {
+                p1: 'p',
+                p2: 'p',
+            },
+        },
+        variants: [
+            {
+                props: { variant: 'p1' },
+                style: ({ theme }) => ({ 
+                    ...theme.typography.p1,
+                    color: theme.palette.colorBase.burgundy,
+                }),
+            },
+            {
+                props: { variant: 'p2' },
+                style: ({ theme }) => ({ 
+                    ...theme.typography.p2,
+                    color: theme.palette.colorBase.burgundy,
+                }),
+            },
+            {
+                props: { color: 'colorBeige' },
+                style: ({ theme }) => ({ color: theme.palette.colorBase.colorBeige }),
+            },
+            {
+                props: { color: 'burgundy' },
+                style: ({ theme }) => ({ color: theme.palette.colorBase.burgundy }),
+            },
+            {
+                props: { color: 'colorChocolate' },
+                style: ({ theme }) => ({ color: theme.palette.colorBase.colorChocolate }),
+            },
+            {
+                props: { color: 'cream' },
+                style: ({ theme }) => ({ color: theme.palette.colorBase.cream }),
+            },
+            {
+                props: { color: 'marsala' },
+                style: ({ theme }) => ({ color: theme.palette.colorBase.marsala }),
+            },
+        ],
+    },
 };

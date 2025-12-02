@@ -34,9 +34,21 @@ export const typography: NonNullable<ThemeOptions['typography']> = {
         fontWeight: 400,
     },
     button: {
-        fontWeight: 500,
-        lineHeight: 1.5,
         fontSize: '1rem',
+        lineHeight: 1.5,
+        fontWeight: 500,
         textTransform: 'none',
+    },
+    p1: {
+        fontFamily: baseFontFamily,
+        fontSize: '1.125rem',
+        lineHeight: '1.5rem',
+        fontWeight: 500,
+    },
+    p2: {
+        fontFamily: baseFontFamily,
+        fontSize: '1rem',
+        lineHeight: '1.5rem',
+        fontWeight: 400,
     },
 };
