@@ -1,0 +1,46 @@
+export const colors = {
+    colorBase: {
+        light: {
+            colorBeige: '#DECDBC',
+            colorChocolate: '#48342C',
+            burgundy: '#5B2727 ',
+            cream: '#F6ECD9',
+            marsala: '#AD746D',
+            bgBase: '#DECDBC',
+            bgSecond: '#5B2727',
+        },
+        dark: {
+            beige: '#000',
+            burgundy: '#000 ',
+            chocolate: '#000',
+            cream: '#000',
+            marsala: '#000',
+            bgBase: '#000',
+            bgSecond: '#000',
+        },
+    },
+    colorButtonWine: {
+        light: {
+            base: '#7E0B1A',
+            hover: '#B50020',
+            disabled: '#C9B99B',
+        },
+        dark: {
+            base: '#000',
+            hover: '#fff',
+            disabled: '#000',
+        },
+    },
+    colorText: {
+        light: {
+            wineBase: '#7E0B1A',
+            ivoryBase: '#FAF3E1',
+            ivorySecond: '#E6D8CB',
+        },
+        dark: {
+            wineBase: '#000',
+            ivoryBase: '#000',
+            ivorySecond: '#000',
+        },
+    },
+};
