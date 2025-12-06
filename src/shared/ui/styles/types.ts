@@ -1,6 +1,5 @@
 import { CSSProperties } from 'react';
 
-
 export interface CustomColorBasePalette {
   colorBeige: string;
   colorChocolate: string;

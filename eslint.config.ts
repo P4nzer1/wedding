@@ -117,7 +117,7 @@ export default tseslint.config(
         },
       ],
 
-      'import/newline-after-import': ['error', { count: 2 }],
+      'import/newline-after-import': ['error', { count: 1 }],
 
       'no-multiple-empty-lines': [
         'error',

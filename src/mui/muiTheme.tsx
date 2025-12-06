@@ -6,7 +6,6 @@ import { ThemeModeEnum, getPreferredTheme } from '@features/settings/store';
 
 import { lightTheme, darkTheme, components, typography } from '@shared/ui/styles';
 
-
 export const withMui = (component: () => ReactNode) => {
   return function WithMuiComponent() {
     const [mode] = useState<ThemeModeEnum>(ThemeModeEnum.Auto);
