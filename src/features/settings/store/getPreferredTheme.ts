@@ -1,5 +1,7 @@
 import { PaletteMode } from '@mui/material';
+
 import { ThemeModeEnum } from './themeTypes';
+
 
 export const getPreferredTheme = (): PaletteMode => {
     const storedTheme = localStorage.getItem('themeMode');

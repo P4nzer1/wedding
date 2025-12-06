@@ -8,6 +8,7 @@ import {
     ButtonVariant
 } from '@shared/ui/styles/types';
 
+
 declare module '@mui/material/styles' { 
     interface Palette extends CustomPalette {}
     interface PaletteOptions extends CustomPaletteOptions {}

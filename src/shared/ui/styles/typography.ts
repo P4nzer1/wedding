@@ -1,5 +1,6 @@
 import type { ThemeOptions } from '@mui/material/styles';
 
+
 const baseFontFamily = '"TT Norms Pro", "Inter", "Roboto", "Helvetica", "Arial", sans-serif';
 const headingFontFamily = "Roboto Flex";
 
