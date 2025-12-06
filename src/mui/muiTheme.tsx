@@ -8,25 +8,25 @@ import { lightTheme, darkTheme, components, typography } from '@shared/ui/styles
 
 
 export const withMui = (component: () => ReactNode) => {
-    return function WithMuiComponent() {
-        const [mode] = useState<ThemeModeEnum>(ThemeModeEnum.Auto);
+  return function WithMuiComponent() {
+    const [mode] = useState<ThemeModeEnum>(ThemeModeEnum.Auto);
 
-        const themePalette = (mode === ThemeModeEnum.Auto ? getPreferredTheme() : mode) as PaletteMode;
+    const themePalette = (mode === ThemeModeEnum.Auto ? getPreferredTheme() : mode) as PaletteMode;
 
-        const theme = createTheme({
-            palette: {
-                mode: themePalette,
-                ...(themePalette === 'light' ? lightTheme : darkTheme),
-            },
-            components,
-            typography,
-        });
+    const theme = createTheme({
+      palette: {
+        mode: themePalette,
+        ...(themePalette === 'light' ? lightTheme : darkTheme),
+      },
+      components,
+      typography,
+    });
 
-        return (
-            <>
-                <CssBaseline />
-                <ThemeProvider theme={theme}>{component()}</ThemeProvider>
-            </>
-        );
-    };
+    return (
+      <>
+        <CssBaseline />
+        <ThemeProvider theme={theme}>{component()}</ThemeProvider>
+      </>
+    );
+  };
 };
