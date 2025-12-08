@@ -1,0 +1,12 @@
+commit_msg=$(cat "$1")
+pattern="^(fix|feat)-[0-9]+ - .+"
+
+if ! echo "$commit_msg" | grep -qE "$pattern"; then
+    echo "❌ Неверный формат коммита! Долбоеб?"
+    echo "Требуемый формат: feat-XXX - описание"
+    echo "Например: fix-123 - добавил валидацию формы"
+    echo "Ваш коммит: $commit_msg"
+    exit 1
+fi
+
+echo "✅ Формат коммита корректный"

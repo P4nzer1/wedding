@@ -1,0 +1,2 @@
+echo "🔍 Lint + Prettier для изменённых файлов..."
+npx lint-staged
