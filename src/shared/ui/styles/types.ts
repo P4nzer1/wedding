@@ -47,3 +47,9 @@ export interface CustomTypographyVariantsOptions {
 }
 
 export type ButtonVariant = 'wine';
+
+export interface CustomTypographyPropsVariantOverrides {
+  button: true;
+  p1: true;
+  p2: true;
+}

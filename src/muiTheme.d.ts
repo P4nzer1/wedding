@@ -6,6 +6,7 @@ import {
   CustomTypographyVariants,
   CustomTypographyVariantsOptions,
   ButtonVariant,
+  CustomTypographyPropsVariantOverrides,
 } from '@shared/ui/styles/types';
 
 declare module '@mui/material/styles' {
@@ -20,9 +21,5 @@ declare module '@mui/material/Button' {
 }
 
 declare module '@mui/material/Typography' {
-  interface TypographyPropsVariantOverrides {
-    button: true;
-    p1: true;
-    p2: true;
-  }
+  interface TypographyPropsVariantOverrides extends CustomTypographyPropsVariantOverrides {}
 }
