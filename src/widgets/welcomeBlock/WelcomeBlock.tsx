@@ -1,13 +1,62 @@
-import { Box, Typography, useTheme } from '@mui/material';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import { Box, Divider, Typography, useTheme } from '@mui/material';
+
+import WelcomeImage from '@shared/assets/images/11.jpg';
 
 export const WelcomeBlock = () => {
   const theme = useTheme();
 
   return (
-    <Box sx={{ backgroundColor: theme.palette.colorBase.bgBase, width: '100%', height: '100%' }}>
-      <Typography variant="h1" color="cream">
-        МЫ ЖЕНИМСЯ
+    <Box
+      sx={{
+        background: theme.palette.colorBase.bgGradient,
+        width: '100%',
+        height: '100%',
+        overflow: 'hidden',
+      }}
+    >
+      <FavoriteIcon
+        sx={{
+          transform: 'scale(33, 48) translate(4%, 38%)',
+          transformOrigin: 'center',
+          color: theme.palette.colorBase.bgSecond,
+        }}
+      />
+      <Typography
+        variant="h2"
+        color="cream"
+        sx={{
+          position: 'relative',
+          whiteSpace: 'pre-line',
+          textAlign: 'right',
+          top: '13%',
+          right: '20%',
+        }}
+      >
+        МЫ {'\n'} ЖЕНИМСЯ
       </Typography>
+
+      <Typography
+        variant="h1"
+        color="colorBeige"
+        sx={{ position: 'relative', top: '30%', left: '15%', width: '11%' }}
+      >
+        12
+        <Divider sx={{ height: '3px', backgroundColor: theme.palette.colorBase.colorBeige }} />
+        06
+        <Divider sx={{ height: '3px', backgroundColor: theme.palette.colorBase.colorBeige }} />
+        26
+      </Typography>
+      <Box
+        component="img"
+        src={WelcomeImage}
+        alt="если что в дс"
+        sx={{
+          position: 'absolute',
+          top: '60%',
+          left: '50%',
+        }}
+      />
     </Box>
   );
 };

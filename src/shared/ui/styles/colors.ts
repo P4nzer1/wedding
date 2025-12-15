@@ -3,11 +3,12 @@ export const colors = {
     light: {
       colorBeige: '#DECDBC',
       colorChocolate: '#48342C',
-      burgundy: '#5B2727 ',
+      burgundy: '#5B2727',
       cream: '#F6ECD9',
       marsala: '#AD746D',
       bgBase: '#DECDBC',
       bgSecond: '#5B2727',
+      bgGradient: 'linear-gradient(45deg, #DECDBC 60%, #AD746D)',
     },
     dark: {
       beige: '#000',
@@ -17,6 +18,7 @@ export const colors = {
       marsala: '#000',
       bgBase: '#000',
       bgSecond: '#000',
+      bgGradient: 'linear-gradient(45deg, #DECDBC 60%, #AD746D)',
     },
   },
   colorButtonWine: {
