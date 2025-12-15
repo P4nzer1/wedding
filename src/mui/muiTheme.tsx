@@ -4,7 +4,7 @@ import { PaletteMode, ThemeProvider, CssBaseline, createTheme } from '@mui/mater
 
 import { ThemeModeEnum, getPreferredTheme } from '@features/settings/store';
 
-import { lightTheme, darkTheme, components, typography } from '@shared/ui/styles';
+import { lightTheme, darkTheme, components, typography } from '@shared/ui';
 
 export const withMui = (component: () => ReactNode) => {
   return function WithMuiComponent() {

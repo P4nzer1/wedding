@@ -8,6 +8,7 @@ export interface CustomColorBasePalette {
   marsala: string;
   bgBase: string;
   bgSecond: string;
+  bgGradient: string;
 }
 
 export interface CustomColorButtonWinePalette {
