@@ -39,18 +39,29 @@ export const WelcomeBlock = () => {
       <Typography
         variant="h1"
         color="colorBeige"
-        sx={{ position: 'relative', top: '30%', left: '15%', width: '11%' }}
+        sx={{
+          fontSize: '4em',
+          position: 'relative',
+          top: '25%',
+          left: '11%',
+          display: 'inline-flex',
+          flexDirection: 'column',
+        }}
       >
-        12
-        <Divider sx={{ height: '3px', backgroundColor: theme.palette.colorBase.colorBeige }} />
-        06
-        <Divider sx={{ height: '3px', backgroundColor: theme.palette.colorBase.colorBeige }} />
-        26
+        <Box>
+          12
+          <Divider sx={{ height: '5px', backgroundColor: theme.palette.colorBase.colorBeige }} />
+        </Box>
+        <Box>
+          06
+          <Divider sx={{ height: '5px', backgroundColor: theme.palette.colorBase.colorBeige }} />
+        </Box>
+        <Box>26</Box>
       </Typography>
       <Box
         component="img"
         src={WelcomeImage}
-        alt="если что в дс"
+        alt="если что я в дс"
         sx={{
           position: 'absolute',
           top: '60%',

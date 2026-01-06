@@ -1,21 +1,19 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode } from 'react';
 
-import { PaletteMode, ThemeProvider, CssBaseline, createTheme } from '@mui/material';
-
-import { ThemeModeEnum, getPreferredTheme } from '@features/settings/store';
+import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
 
 import { lightTheme, darkTheme, components, typography } from '@shared/ui';
 
+import { useTheme } from '@/features';
+
 export const withMui = (component: () => ReactNode) => {
   return function WithMuiComponent() {
-    const [mode] = useState<ThemeModeEnum>(ThemeModeEnum.Auto);
-
-    const themePalette = (mode === ThemeModeEnum.Auto ? getPreferredTheme() : mode) as PaletteMode;
+    const { effectiveMode } = useTheme();
 
     const theme = createTheme({
       palette: {
-        mode: themePalette,
-        ...(themePalette === 'light' ? lightTheme : darkTheme),
+        mode: effectiveMode,
+        ...(effectiveMode === 'light' ? lightTheme : darkTheme),
       },
       components,
       typography,
