@@ -1,13 +1,17 @@
-import { Box, Typography, useTheme } from '@mui/material';
+import { AppBar, Toolbar, Box, useTheme } from '@mui/material';
+
+import { ThemeToggleButton } from '@/features';
 
 export const Header = () => {
   const theme = useTheme();
 
   return (
-    <Box sx={{ backgroundColor: theme.palette.colorBase.bgSecond, width: '100%' }}>
-      <Typography variant="h1" color="cream">
-        ХЕДЕР
-      </Typography>
-    </Box>
+    <AppBar position="fixed" sx={{ background: theme.palette.colorBase.colorBeige }}>
+      <Toolbar>
+        <Box>
+          <ThemeToggleButton />
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 };

@@ -1,8 +1,9 @@
 import { Layout } from './layout/Layout';
 
+import { ThemeProvider } from '@/features';
 import { withMui } from '@/mui';
 
-const App = () => {
+const AppContent = () => {
   return (
     <div>
       <Layout />
@@ -10,4 +11,14 @@ const App = () => {
   );
 };
 
-export default withMui(App);
+const AppWithMui = withMui(AppContent);
+
+const App = () => {
+  return (
+    <ThemeProvider>
+      <AppWithMui />
+    </ThemeProvider>
+  );
+};
+
+export default App;
