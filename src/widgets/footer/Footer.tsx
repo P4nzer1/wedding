@@ -1,13 +1,20 @@
-import { Box, Typography, useTheme } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
+
+import footerBackground from '@/shared/assets/images/footer/footer.png';
 
 export const Footer = () => {
   const theme = useTheme();
-
   return (
-    <Box sx={{ backgroundColor: theme.palette.colorBase.bgSecond, width: '100%' }}>
-      <Typography variant="h1" color="cream">
-        ПОДВАЛ
-      </Typography>
-    </Box>
+    <Box
+      sx={{
+        backgroundImage: `url(${footerBackground})`,
+        width: '100%',
+        height: 80,
+        backgroundRepeat: 'repeat-x',
+        backgroundSize: 'auto 260%',
+        backgroundPositionY: 'bottom',
+        bgcolor: theme.palette.colorBg.colorBeige,
+      }}
+    />
   );
 };

@@ -62,7 +62,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const useTheme = () => {
+export const useThemeContext = () => {
   const context = useContext(ThemeContext);
   return context;
 };

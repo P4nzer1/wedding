@@ -1,14 +1,14 @@
 import { MainPage } from '@/pages';
-import { Header } from '@/widgets';
+import { Header, Footer } from '@/widgets';
 
-const blocks = [Header, MainPage];
+const blocks = [Header, MainPage, Footer];
 
 export const Layout = () => {
   return (
-    <section role="main">
-      {blocks.map((Block, id) => (
-        <Block key={id} />
+    <>
+      {blocks.map((Page, id) => (
+        <Page key={id} />
       ))}
-    </section>
+    </>
   );
 };

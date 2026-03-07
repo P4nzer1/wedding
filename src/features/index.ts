@@ -1,2 +1,3 @@
 export { ThemeToggleButton } from './ui/themeToggleButton';
-export { ThemeModeEnum, getPreferredTheme, useTheme, ThemeProvider } from './settings/store';
+export { ThemeModeEnum, getPreferredTheme, useThemeContext, ThemeProvider } from './settings/store';
+export { NavigationMenuDesktop, NavigationMenuMobile } from './navigationMenu/navigationMenu';

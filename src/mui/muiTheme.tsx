@@ -4,11 +4,11 @@ import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
 
 import { lightTheme, darkTheme, components, typography } from '@shared/ui';
 
-import { useTheme } from '@/features';
+import { useThemeContext } from '@/features';
 
 export const withMui = (component: () => ReactNode) => {
   return function WithMuiComponent() {
-    const { effectiveMode } = useTheme();
+    const { effectiveMode } = useThemeContext();
 
     const theme = createTheme({
       palette: {
@@ -20,10 +20,10 @@ export const withMui = (component: () => ReactNode) => {
     });
 
     return (
-      <>
+      <ThemeProvider theme={theme}>
         <CssBaseline />
-        <ThemeProvider theme={theme}>{component()}</ThemeProvider>
-      </>
+        {component()}
+      </ThemeProvider>
     );
   };
 };

@@ -1,19 +1,49 @@
-import { Layout } from './layout/Layout';
+import { useLayoutEffect } from 'react';
+
+import { Layout } from './layout';
+import { resetViewportHeightCache, setViewportHeightVar } from './viewports';
+import {
+  isMobileBrowser,
+  isTelegramWebView,
+  isYandexBrowser,
+  setTelegramSafeAreaFix,
+  setYandexSafeAreaFix,
+} from './viewports/browser';
 
 import { ThemeProvider } from '@/features';
 import { withMui } from '@/mui';
 
-const AppContent = () => {
-  return (
-    <div>
-      <Layout />
-    </div>
-  );
-};
-
-const AppWithMui = withMui(AppContent);
+const Content = () => <Layout />;
+const AppWithMui = withMui(Content);
 
 const App = () => {
+  useLayoutEffect(() => {
+    const shouldLockDynamicViewport = isMobileBrowser() || isTelegramWebView() || isYandexBrowser();
+    const setViewport = () =>
+      setViewportHeightVar({
+        useVisualViewport: !shouldLockDynamicViewport,
+        lockToMaxHeight: shouldLockDynamicViewport,
+      });
+    const handleOrientationChange = () => {
+      resetViewportHeightCache();
+      setViewport();
+    };
+
+    setTelegramSafeAreaFix();
+    setYandexSafeAreaFix();
+    setViewport();
+
+    window.addEventListener('orientationchange', handleOrientationChange);
+    window.addEventListener('resize', setViewport);
+    window.visualViewport?.addEventListener('resize', setViewport);
+
+    return () => {
+      window.removeEventListener('orientationchange', handleOrientationChange);
+      window.removeEventListener('resize', setViewport);
+      window.visualViewport?.removeEventListener('resize', setViewport);
+    };
+  }, []);
+
   return (
     <ThemeProvider>
       <AppWithMui />

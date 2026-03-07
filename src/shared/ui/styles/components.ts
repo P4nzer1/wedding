@@ -5,13 +5,15 @@ export const components: Components<Theme> = {
     styleOverrides: {
       root: ({ theme }) => ({
         ...theme.typography.button,
-        borderRadius: '8px',
+        borderRadius: theme.spacing(2),
+        padding: theme.spacing(2, 3),
         border: 'none',
-        transition: 'all 0.9s ease',
+        transition: 'all 0.6s ease',
         cursor: 'pointer',
-        padding: theme.spacing(1.8, 4),
-        '&:hover': {},
-        '&:active': {},
+        touchAction: 'manipulation',
+        WebkitTapHighlightColor: 'transparent',
+        '&:hover': { opacity: 0.9 },
+        '&:active': { opacity: 0.6 },
         '&:disabled': { cursor: 'not-allowed', opacity: 0.5 },
       }),
     },
@@ -20,35 +22,33 @@ export const components: Components<Theme> = {
       {
         props: { variant: 'wine' },
         style: ({ theme }) => ({
+          padding: theme.spacing(1, 3),
           backgroundColor: theme.palette.colorButtonWine.base,
-          color: theme.palette.colorText.ivoryBase,
-          borderRadius: '50px',
+          color: theme.palette.colorText.colorIvory,
           '&:hover': { backgroundColor: theme.palette.colorButtonWine.hover },
           '&:disabled': { backgroundColor: theme.palette.colorButtonWine.disabled },
+        }),
+      },
+      {
+        props: { variant: 'rose' },
+        style: ({ theme }) => ({
+          backgroundColor: theme.palette.colorBg.colorRose,
+          color: theme.palette.colorText.colorWine,
+          padding: theme.spacing(1, 3),
+          boxShadow: theme.shadows[2],
+          '&:hover': { backgroundColor: theme.palette.colorBg.colorRose },
         }),
       },
     ],
   },
   MuiTypography: {
-    defaultProps: {
-      variantMapping: {
-        p1: 'p',
-        p2: 'p',
-      },
-    },
+    defaultProps: {},
     variants: [
       {
-        props: { variant: 'p1' },
+        props: { variant: 'body1' },
         style: ({ theme }) => ({
-          ...theme.typography.p1,
-          color: theme.palette.colorBase.burgundy,
-        }),
-      },
-      {
-        props: { variant: 'p2' },
-        style: ({ theme }) => ({
-          ...theme.typography.p2,
-          color: theme.palette.colorBase.burgundy,
+          ...theme.typography.body1,
+          color: theme.palette.colorBase.colorWine,
         }),
       },
       {
@@ -56,20 +56,12 @@ export const components: Components<Theme> = {
         style: ({ theme }) => ({ color: theme.palette.colorBase.colorBeige }),
       },
       {
-        props: { color: 'burgundy' },
-        style: ({ theme }) => ({ color: theme.palette.colorBase.burgundy }),
+        props: { color: 'colorWine' },
+        style: ({ theme }) => ({ color: theme.palette.colorBase.colorWine }),
       },
       {
         props: { color: 'colorChocolate' },
         style: ({ theme }) => ({ color: theme.palette.colorBase.colorChocolate }),
-      },
-      {
-        props: { color: 'cream' },
-        style: ({ theme }) => ({ color: theme.palette.colorBase.cream }),
-      },
-      {
-        props: { color: 'marsala' },
-        style: ({ theme }) => ({ color: theme.palette.colorBase.marsala }),
       },
     ],
   },

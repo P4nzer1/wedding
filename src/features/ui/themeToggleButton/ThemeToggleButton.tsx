@@ -1,26 +1,15 @@
-import { Button } from '@mui/material';
+import ContrastIcon from '@mui/icons-material/Contrast';
+import { IconButton, useTheme } from '@mui/material';
 
-import { useTheme, ThemeModeEnum } from '@/features';
+import { useThemeContext } from '@/features';
 
 export const ThemeToggleButton = () => {
-  const { mode, toggleMode } = useTheme();
-
-  const getButtonText = () => {
-    switch (mode) {
-      case ThemeModeEnum.Auto:
-        return 'Тема: Авто';
-      case ThemeModeEnum.Light:
-        return 'Светлая тема';
-      case ThemeModeEnum.Dark:
-        return 'Темная тема';
-      default:
-        return 'Переключить тему';
-    }
-  };
+  const { toggleMode } = useThemeContext();
+  const theme = useTheme();
 
   return (
-    <Button variant="wine" onClick={toggleMode}>
-      {getButtonText()}
-    </Button>
+    <IconButton onClick={toggleMode}>
+      <ContrastIcon sx={{ color: theme.palette.colorBase.colorRose }} />
+    </IconButton>
   );
 };

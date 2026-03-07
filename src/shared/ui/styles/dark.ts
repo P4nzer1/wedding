@@ -4,4 +4,5 @@ export const darkTheme = {
   colorBase: { ...colors.colorBase.dark },
   colorButtonWine: { ...colors.colorButtonWine.dark },
   colorText: { ...colors.colorText.dark },
+  colorBg: { ...colors.colorBg.dark },
 };
