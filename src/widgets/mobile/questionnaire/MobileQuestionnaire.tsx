@@ -17,7 +17,7 @@ export const MobileQuestionnaire = () => {
       <Typography
         textAlign="center"
         variant="h2greatVibes"
-        color={theme.palette.colorText.colorChocolate}
+        color={theme.palette.colorText.colorWine}
       >
         <Trans i18nKey="mobile.section.questionnaire.header" components={{ br: <br /> }} />
       </Typography>
@@ -66,7 +66,7 @@ export const MobileQuestionnaire = () => {
         <Typography
           mt={3}
           textAlign="center"
-          variant="h2ysabeauSc"
+          variant="h3greatVibes"
           color={theme.palette.colorText.colorWine}
         >
           {t('mobile.section.questionnaire.footer')}

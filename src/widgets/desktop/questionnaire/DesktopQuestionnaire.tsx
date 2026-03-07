@@ -17,7 +17,7 @@ export const DesktopQuestionnaire = () => {
       <Typography
         textAlign="center"
         variant="h2greatVibes"
-        color={theme.palette.colorText.colorChocolate}
+        color={theme.palette.colorText.colorWine}
       >
         <Trans i18nKey="desktop.section.questionnaire.header" components={{ br: <br /> }} />
       </Typography>
@@ -31,7 +31,7 @@ export const DesktopQuestionnaire = () => {
         >
           <Trans i18nKey="desktop.section.questionnaire.title" components={{ br: <br /> }} />
         </Typography>
-        <Button sx={{ width: '60%' }} variant="rose" onClick={guestForm}>
+        <Button sx={{ width: '60%' }} variant="wine" onClick={guestForm}>
           {t('buttons.guest-profile').toUpperCase()}
         </Button>
         <Lottie
@@ -56,7 +56,7 @@ export const DesktopQuestionnaire = () => {
         <Typography
           mt={4}
           textAlign="center"
-          variant="h1ysabeauSc"
+          variant="h3greatVibes"
           color={theme.palette.colorText.colorWine}
         >
           {t('desktop.section.questionnaire.footer')}

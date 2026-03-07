@@ -27,6 +27,7 @@ export const DesktopDress = () => {
         minHeight={0}
         width="100%"
         gap={2}
+        alignItems="center"
       >
         <Typography textAlign="center" variant="body1" color={theme.palette.colorText.colorIvory}>
           <Trans
@@ -66,7 +67,7 @@ const Wrapper = styled(Stack)(({ theme }) => ({
 }));
 
 const ColorsBlock = styled(Stack)(() => ({
-  width: '100%',
+  width: '80%',
   flex: 1,
   flexDirection: 'column',
   justifyContent: 'center',
