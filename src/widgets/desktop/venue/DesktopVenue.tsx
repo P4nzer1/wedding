@@ -16,7 +16,7 @@ export const DesktopVenue = () => {
       <Content>
         <Typography
           textAlign="center"
-          variant="h3ysabeauSc"
+          variant="h4ysabeauSc"
           color={theme.palette.colorText.colorChocolate}
         >
           <Trans i18nKey={'desktop.section.venue.sub-title'} components={{ br: <br /> }} />

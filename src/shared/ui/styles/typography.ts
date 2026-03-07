@@ -54,12 +54,30 @@ export const typography: NonNullable<ThemeOptions['typography']> = {
     },
   },
   h3greatVibes: {
-    fontSize: '1.75rem',
+    fontSize: '2.25rem',
     lineHeight: 1,
     fontWeight: 500,
     fontFamily: secondaryFontFamily,
     [up(breakpoints.xl)]: {
       fontSize: '3rem',
+    },
+  },
+  h4ysabeauSc: {
+    fontSize: '0.75rem',
+    lineHeight: 1,
+    fontWeight: 500,
+    fontFamily: ysabeauSc,
+    [up(breakpoints.xl)]: {
+      fontSize: '1.5rem',
+    },
+  },
+  h4greatVibes: {
+    fontSize: '1.5rem',
+    lineHeight: 1,
+    fontWeight: 500,
+    fontFamily: secondaryFontFamily,
+    [up(breakpoints.xl)]: {
+      fontSize: '2.5rem',
     },
   },
   body1: {

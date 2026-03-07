@@ -7,6 +7,7 @@ import {
   isTelegramWebView,
   isYandexBrowser,
   setTelegramSafeAreaFix,
+  setTelegramWebAppColors,
   setYandexSafeAreaFix,
 } from './viewports/browser';
 
@@ -30,6 +31,7 @@ const App = () => {
     };
 
     setTelegramSafeAreaFix();
+    setTelegramWebAppColors();
     setYandexSafeAreaFix();
     setViewport();
 

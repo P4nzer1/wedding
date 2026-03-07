@@ -51,9 +51,11 @@ export interface CustomTypographyVariants {
   h1ysabeauSc: CSSProperties;
   h2ysabeauSc: CSSProperties;
   h3ysabeauSc: CSSProperties;
+  h4ysabeauSc: CSSProperties;
   h1greatVibes: CSSProperties;
   h2greatVibes: CSSProperties;
   h3greatVibes: CSSProperties;
+  h4greatVibes: CSSProperties;
 }
 
 export interface CustomTypographyVariantsOptions {
@@ -64,9 +66,11 @@ export interface CustomTypographyVariantsOptions {
   h1ysabeauSc?: CSSProperties;
   h2ysabeauSc?: CSSProperties;
   h3ysabeauSc?: CSSProperties;
+  h4ysabeauSc?: CSSProperties;
   h1greatVibes?: CSSProperties;
   h2greatVibes?: CSSProperties;
   h3greatVibes?: CSSProperties;
+  h4greatVibes?: CSSProperties;
 }
 
 export type ButtonVariant = 'wine' | 'rose';
@@ -79,7 +83,9 @@ export interface CustomTypographyPropsVariantOverrides {
   h1ysabeauSc: true;
   h2ysabeauSc: true;
   h3ysabeauSc: true;
+  h4ysabeauSc: true;
   h1greatVibes: true;
   h2greatVibes: true;
   h3greatVibes: true;
+  h4greatVibes: true;
 }

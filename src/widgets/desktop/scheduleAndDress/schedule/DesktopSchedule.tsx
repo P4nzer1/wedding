@@ -57,7 +57,7 @@ export const DesktopSchedule = () => {
               alignItems="start"
               minWidth={0}
             >
-              <Typography variant="body1" sx={{ color: theme.palette.colorText.colorIvory }}>
+              <Typography variant="h4ysabeauSc" sx={{ color: theme.palette.colorText.colorIvory }}>
                 {t(
                   `desktop.section.scheduleAndDress.schedule.sub-title.${partKey}.title`,
                 ).toUpperCase()}
