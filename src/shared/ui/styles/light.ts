@@ -4,4 +4,5 @@ export const lightTheme = {
   colorBase: { ...colors.colorBase.light },
   colorButtonWine: { ...colors.colorButtonWine.light },
   colorText: { ...colors.colorText.light },
+  colorBg: { ...colors.colorBg.light },
 };

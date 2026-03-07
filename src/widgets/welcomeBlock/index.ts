@@ -1,1 +1,0 @@
-export { WelcomeBlock } from './WelcomeBlock';

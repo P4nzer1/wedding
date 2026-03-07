@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'Istok Web';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../assets/fonts/Istok_Web/IstokWeb-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Istok Web';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../../assets/fonts/Istok_Web/IstokWeb-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Istok Web';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../assets/fonts/Istok_Web/IstokWeb-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Istok Web';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../../assets/fonts/Istok_Web/IstokWeb-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Great Vibes';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../assets/fonts/Great_Vibes/GreatVibes-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'YsabeauCustom';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../assets/fonts/Ysabeau/static/Ysabeau-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'YsabeauCustom';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../../assets/fonts/Ysabeau/static/Ysabeau-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'YsabeauCustom';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../../assets/fonts/Ysabeau/static/Ysabeau-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'YsabeauCustom';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../assets/fonts/Ysabeau/static/Ysabeau-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'YsabeauCustom';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../../assets/fonts/Ysabeau/static/Ysabeau-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'YsabeauCustom';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../../assets/fonts/Ysabeau/static/Ysabeau-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'YsabeauSc';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../../assets/fonts/Ysabeau_SC/YsabeauSC-VariableFont_wght.ttf') format('truetype');
+}

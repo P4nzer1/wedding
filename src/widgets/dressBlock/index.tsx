@@ -1,1 +1,0 @@
-export { DressBlock } from './DressBlock';
