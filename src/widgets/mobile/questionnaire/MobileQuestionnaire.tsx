@@ -36,7 +36,7 @@ export const MobileQuestionnaire = () => {
         >
           <Trans i18nKey="mobile.section.questionnaire.title" components={{ br: <br /> }} />
         </Typography>
-        <Button sx={{ width: '60%' }} variant="rose" onClick={guestForm}>
+        <Button sx={{ width: '60%' }} variant="wine" onClick={guestForm}>
           {t('buttons.guest-profile').toUpperCase()}
         </Button>
         <Lottie
