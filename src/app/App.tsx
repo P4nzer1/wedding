@@ -3,6 +3,7 @@ import { useLayoutEffect } from 'react';
 import { Layout } from './layout';
 import { resetViewportHeightCache, setViewportHeightVar } from './viewports';
 import {
+  initTelegramWebApp,
   isMobileBrowser,
   isTelegramWebView,
   isYandexBrowser,
@@ -30,6 +31,7 @@ const App = () => {
       setViewport();
     };
 
+    initTelegramWebApp();
     setTelegramSafeAreaFix();
     setTelegramWebAppColors();
     setYandexSafeAreaFix();

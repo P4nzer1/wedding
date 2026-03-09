@@ -1,8 +1,11 @@
 type TelegramWindow = Window & {
   Telegram?: {
     WebApp?: {
+      ready?: () => void;
+      expand?: () => void;
       setHeaderColor?: (color: string) => void;
       setBackgroundColor?: (color: string) => void;
+      setBottomBarColor?: (color: string) => void;
     };
   };
 };
@@ -30,4 +33,17 @@ export const setTelegramWebAppColors = (color = '#5f2a2a') => {
 
   webApp.setHeaderColor?.(color);
   webApp.setBackgroundColor?.(color);
+  webApp.setBottomBarColor?.(color);
+};
+
+export const initTelegramWebApp = () => {
+  const telegramWindow = window as TelegramWindow;
+  const webApp = telegramWindow.Telegram?.WebApp;
+
+  if (!webApp) {
+    return;
+  }
+
+  webApp.ready?.();
+  webApp.expand?.();
 };
