@@ -2,11 +2,11 @@ import { useState, MouseEvent } from 'react';
 
 import Lottie from 'lottie-react';
 
-import { IconButton, Stack, useMediaQuery, useTheme } from '@mui/material';
+import { Box, IconButton, Stack, useMediaQuery, useTheme } from '@mui/material';
 
 import { LogoIcon } from '@shared/ui';
 
-import { NavigationMenuDesktop, NavigationMenuMobile, ThemeToggleButton } from '@/features';
+import { NavigationMenuDesktop, NavigationMenuMobile } from '@/features';
 import WinePour from '@/shared/assets/animations/WineBottleAnimation.json';
 
 export const Header = () => {
@@ -35,7 +35,7 @@ export const Header = () => {
         background: theme.palette.colorBg.colorWine,
         height: `calc(${headerBaseHeight}px + var(--safe-top, 0px))`,
         width: '100%',
-        justifyContent: 'space-between',
+        justifyContent: 'flex-end',
         alignItems: 'center',
         flexDirection: 'row',
         px: 2,
@@ -45,23 +45,26 @@ export const Header = () => {
         position: 'fixed',
         top: 0,
         left: 0,
+        overflow: 'hidden',
         zIndex: theme.zIndex.appBar,
       }}
     >
       {isDesktop ? (
         <>
-          <ThemeToggleButton />
-          <LogoIcon color={theme.palette.colorBase.colorRose} />
-          <IconButton onClick={handleOpen}>
+          <Box sx={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
+            <LogoIcon color={theme.palette.colorBase.colorRose} />
+          </Box>
+          <IconButton onClick={handleOpen} sx={{ ml: 'auto' }}>
             <Lottie loop animationData={WinePour} style={{ width: 40, height: 40 }} />
           </IconButton>
           <NavigationMenuDesktop anchorEl={anchorEl} open={open} onClose={handleClose} />
         </>
       ) : (
         <>
-          <ThemeToggleButton />
-          <LogoIcon color={theme.palette.colorBase.colorRose} />
-          <IconButton onClick={handleOpen}>
+          <Box sx={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
+            <LogoIcon color={theme.palette.colorBase.colorRose} />
+          </Box>
+          <IconButton onClick={handleOpen} sx={{ ml: 'auto' }}>
             <Lottie loop animationData={WinePour} style={{ width: 40, height: 40 }} />
           </IconButton>
           <NavigationMenuMobile anchorEl={anchorEl} open={open} onClose={handleClose} />
