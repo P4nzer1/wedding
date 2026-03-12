@@ -25,8 +25,8 @@ export const colors = {
       colorRose: '#ad746d',
     },
     dark: {
-      colorWine: '#000',
-      colorIvory: '#000',
+      colorWine: '#7E0B1A',
+      colorIvory: '#F6ECD9',
       colorChocolate: '#48342C',
       colorRose: '#ad746d',
     },
@@ -39,7 +39,7 @@ export const colors = {
       colorGradient: 'linear-gradient(45deg, #DECDBC 60%, #AD746D)',
     },
     dark: {
-      colorWine: '#48342C',
+      colorWine: '#5f2a2a',
       colorBeige: '#F6ECD9',
       colorRose: '#ad746d',
       colorGradient: 'linear-gradient(45deg, #DECDBC 60%, #AD746D)',
@@ -52,9 +52,9 @@ export const colors = {
       disabled: '#C9B99B',
     },
     dark: {
-      base: '#fff',
-      hover: 'grey',
-      disabled: '#000',
+      base: '#5f2a2a',
+      hover: '#732b2b',
+      disabled: '#C9B99B',
     },
   },
 };
